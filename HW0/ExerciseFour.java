@@ -1,20 +1,18 @@
 public class ExerciseFour {
     public static void windowPosSum(int[] a, int n) {
 
-      for (int x= 0; x<a.length; x++){
+      for (int x= 0; x< a.length; x++){
         if(a[x] < 0){
             continue;
         }else{
-            for(int y=1; y<=n;y++){
-              if(y+n>= a.length){
-                break;
-                }else{
-                  a[x] += a[x+y];
-                  }
-                
+          for (int y = 0; y < n; y++){
+            if( y+x+1 >= a.length){
+              break;
+            }else{
+              a[x] += a[x+y+1];
             }
+          }
         }
-
       }
     }
   
